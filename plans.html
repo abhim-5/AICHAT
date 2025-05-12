@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI CHAT -Explore Plans </title>
+  <link  rel="icon" href="images/logo2.png" type="image/png" sizes="16x16"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/plan.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script> 
+  
+<style>
+  .animate-on-scroll {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
+	will-change: transform, opacity;
+}
+
+.animate-on-scroll.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+</style>
+
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+    <div class="logo">
+      <img src="images/logo2.png" alt="AI Chat Logo" class="logo-img">
+      <span class="span1">AI</span><span class="span2">CHAT</span></div>
+      </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="nevox-container">
+        <a href="nevox.html" class="nevox-link">Nevox</a>
+        <div class="nevox-tooltip">
+          <a href="veevee.html">VeeVee</a>
+          <a href="tillu.html">Baba Tillu</a>
+          <a href="bbg.html">BBG</a>
+        </div>
+      </div>
+      <a href="plans.html" class="thisone">Pricing</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <button class="button"><a href="login.html">Sign Up / Sign In</a></button>
+  </header>
+
+      
+  <section class="py-16 animate-on-scroll" id="white">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-2 animate-on-scroll" style="color: cyan;">Pricing Plans</h1>
+      <p class="text-white animate-on-scroll">Choose the plan that fits your needs</p>
+      <div class="mt-6 flex justify-center items-center gap-4">
+        <span class="text-white font-medium">Monthly</span>
+        <div id="toggleBtn" class="toggle-switch">
+          <div class="toggle-circle"></div>
+        </div>
+        <span class="text-white font-medium">Yearly</span>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div id="plansContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Cards will be inserted here dynamically -->
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        
+        <p class="slogan animate-on-scroll">
+          We growing up your <br>
+          business with personal <br>
+          <strong>AI manager.</strong><br>
+          <span class="credit">AICHAT, 2025.</span>
+        </p>
+      </div>
+  <div class="footer-mid animate-on-scroll" >
+    <a href="index.html">
+    <img src="images/logo2.png" alt="chat icon" class="chat-icon animate-on-scroll"></a>
+  </div>
+      <div class="footer-links animate-on-scroll">
+        <div>
+          <h4>Platform</h4>
+          <a href="#">Plans & Pricing</a>
+          <a href="#">Personal AI Manager</a>
+          <a href="#">AI Business Writer</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">Papers</a>
+          <a href="#">Press Conferences</a>
+        </div>
+        <div>
+          <h4>Get the app</h4>
+          <button class="app-btn">🪟 Windows</button><br>
+          <button class="app-btn">🍎 macOS</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <span>© 2025 AICHAT. All rights reserved.</span>
+      <div class="bottom-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+  <div class="hero-image-container">
+    <img src="images/bg-room.png" alt="AI Chat" class="hero-image">
+  </div>
+
+  <script>
+    const monthlyPlans = [
+      {
+        title: "Free",
+        price: "₹0",
+        features: ["Access to all Personas", "Limited memory", "20 messages/day", "Access to stanadard tools only", "Community support"]
+      },
+      {
+        title: "Standard",
+        price: "₹50",
+        features: ["Access to all Personas", "Memory for 20 prompt histories", "500 messages/month", "Early access to upcoming features", "Email support"]
+      },
+      {
+        title: "Premium",
+        price: "₹75",
+        features: ["Full Access to all Ai chatbots", "Memory for 100+ prompt histories", "Unlimited messages", "Access to all upcoming AI tools", "Premium customer support"]
+      }
+    ];
+
+    const yearlyPlans = [
+      {
+        title: "Free",
+        price: "₹0",
+        features: ["Access to all Personas", "Limited memory", "20 messages/day", "Access to stanadard tools only", "Community support"]
+      },
+      {
+        title: "Standard",
+        price: "₹500",
+        features: ["Everything in Monthly, plus:", "Memory extended to 50 prompts", "Priority email + chat support", "20% discount on premium upgrades", "Faster processing & replies"]
+      },
+      {
+        title: "Premium",
+        price: "₹750",
+        features: ["Everything in Monthly, plus:", "Early access to beta features", "Enhanced compute power", "Bonus credits for future expansions", "Custom Persona Creator"]
+      }
+    ];
+
+    const plansContainer = document.getElementById("plansContainer");
+    const toggleBtn = document.getElementById("toggleBtn");
+    let isYearly = false;
+
+    function renderPlans(plans) {
+      plansContainer.innerHTML = "";
+      plans.forEach(plan => {
+        const card = document.createElement("div");
+        card.className = "card border rounded-2xl p-6 shadow hover:shadow-lg cursor-pointer transition-transform duration-300";
+        card.innerHTML = `
+          <h3 class="text-2xl font-semibold mb-4">${plan.title}</h3>
+          <p class="text-3xl font-bold mb-2">${plan.price}</p>
+          <hr class="mb-4 border-gray-300" />
+          <ul class="mb-6 space-y-2 text-left">
+            ${plan.features.map(f => `<li class="text-sm text-white">• ${f}</li>`).join("")}
+          </ul>
+          <button class="mt-auto px-4 py-2 bg-cyan-500 text-white rounded-full"><a href="login.html">Access Package</a></button>
+        `;
+        plansContainer.appendChild(card);
+      });
+    }
+
+    // Initial Load
+    renderPlans(monthlyPlans);
+
+    toggleBtn.addEventListener("click", () => {
+      isYearly = !isYearly;
+      toggleBtn.classList.toggle("active");
+      renderPlans(isYearly ? yearlyPlans : monthlyPlans);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+			const scrollElements = document.querySelectorAll(".animate-on-scroll");
+	
+			const elementInView = (el, offset = 100) => {
+				const elementTop = el.getBoundingClientRect().top;
+				return elementTop <= (window.innerHeight - offset);
+			};
+	
+			const displayScrollElement = (element) => {
+				element.classList.add("visible");
+			};
+	
+			const handleScrollAnimation = () => {
+				scrollElements.forEach((el) => {
+					if (elementInView(el, 100)) {
+						displayScrollElement(el);
+					}
+				});
+			};
+	
+			window.addEventListener("scroll", () => {
+				handleScrollAnimation();
+			});
+			
+			// Trigger on page load too
+			handleScrollAnimation();
+		});
+  </script>
+</body>
+</html>

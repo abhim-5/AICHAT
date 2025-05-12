@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI CHAT - LOGIN / SIGNUP</title>
+  <link  rel="icon" href="images/logo2.png" type="image/png" sizes="16x16"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/footer.css">
+
+<style>
+  .animate-on-scroll {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1s ease-out, transform 1s ease-out;
+	will-change: transform, opacity;
+}
+
+.animate-on-scroll.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+</style>
+
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo-link">
+    <div class="logo">
+      <img src="images/logo2.png" alt="AI Chat Logo" class="logo-img">
+      <span class="span1">AI</span><span class="span2">CHAT</span></div>
+      </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="nevox-container">
+        <a href="nevox.html" class="nevox-link">Nevox</a>
+        <div class="nevox-tooltip">
+          <a href="veevee.html">VeeVee</a>
+          <a href="tillu.html">Baba Tillu</a>
+          <a href="bbg.html">BBG</a>
+        </div>
+      </div>
+      <a href="plans.html">Pricing</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <button class="button"><a href="login.html">Sign Up / Sign In</a></button>
+  </header>
+  <div class="hero-image-container animate-on-scroll">
+    <img src="images/bg-room.png" alt="AI Chat" class="hero-image animate-on-scroll">
+  </div>
+  <main>
+   
+
+    <div class="right-box ">
+       <div class="card-wrapper" id="cardWrapper">
+         <!-- Front: Login -->
+         <div class="card login-card">
+          <h1 style="text-align: center;margin-bottom: 360px;font-size: 45px;margin-left: 11px;color: cyan ;position: absolute;"> WELCOME BACK</h1>
+           <h2 >Login</h2>
+           <input type="text" placeholder="Username" style="color: white;" />
+           <input type="password" placeholder="Password" style="color: white;" />
+           <label><input type="checkbox" /> Remember me</label>
+           <button class="login-btn">Login</button>
+           <p><a href="#">Forgot Password?</a></p>
+           <p>New to platform? <a href="#" id="toSignup">Sign Up</a></p>
+         </div>
+ 
+         <!-- Back: Signup -->
+         <div class="card signup-card">
+           <h2>Sign Up</h2>
+           <input type="text" placeholder="First Name" style="color: white;" />
+           <input type="text" placeholder="Last Name" style="color: white;" />
+           <input type="email" placeholder="Email" style="color: white;" />
+           <input type="password" placeholder="Password" style="color: white;" />
+           <button class="register-btn">Register</button>
+           <p>Already have an account? <a href="#" id="toLogin">Login</a></p>
+         </div>
+       </div>
+     </div>
+   </main>
+   <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        
+        <p class="slogan animate-on-scroll">
+          We growing up your <br>
+          business with personal <br>
+          <strong>AI manager.</strong><br>
+          <span class="credit">AICHAT, 2025.</span>
+        </p>
+      </div>
+  <div class="footer-mid animate-on-scroll" >
+    <a href="index.html">
+    <img src="images/logo2.png" alt="chat icon" class="chat-icon animate-on-scroll"></a>
+  </div>
+      <div class="footer-links animate-on-scroll">
+        <div>
+          <h4>Platform</h4>
+          <a href="#">Plans & Pricing</a>
+          <a href="#">Personal AI Manager</a>
+          <a href="#">AI Business Writer</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">Papers</a>
+          <a href="#">Press Conferences</a>
+        </div>
+        <div>
+          <h4>Get the app</h4>
+          <button class="app-btn">🪟 Windows</button><br>
+          <button class="app-btn">🍎 macOS</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <span>© 2025 AICHAT. All rights reserved.</span>
+      <div class="bottom-links">
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+  
+
+   <script>
+    const wrapper = document.getElementById("cardWrapper");
+    const toSignup = document.getElementById("toSignup");
+    const toLogin = document.getElementById("toLogin");
+
+    toSignup.addEventListener("click", () => {
+      wrapper.classList.add("flip");
+    });
+
+    toLogin.addEventListener("click", () => {
+      wrapper.classList.remove("flip");
+    });
+    const welcomeMessage = document.getElementById("welcomeMessage");
+
+toSignup.addEventListener("click", () => {
+  wrapper.classList.add("flip");
+  welcomeMessage.style.display = "none";
+});
+
+toLogin.addEventListener("click", () => {
+  wrapper.classList.remove("flip");
+  welcomeMessage.style.display = "block";
+});
+
+// Hide message by default if signup is visible on load
+if (wrapper.classList.contains("flip")) {
+  welcomeMessage.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+			const scrollElements = document.querySelectorAll(".animate-on-scroll");
+	
+			const elementInView = (el, offset = 100) => {
+				const elementTop = el.getBoundingClientRect().top;
+				return elementTop <= (window.innerHeight - offset);
+			};
+	
+			const displayScrollElement = (element) => {
+				element.classList.add("visible");
+			};
+	
+			const handleScrollAnimation = () => {
+				scrollElements.forEach((el) => {
+					if (elementInView(el, 100)) {
+						displayScrollElement(el);
+					}
+				});
+			};
+	
+			window.addEventListener("scroll", () => {
+				handleScrollAnimation();
+			});
+			
+			// Trigger on page load too
+			handleScrollAnimation();
+		});
+
+
+    
+//form validation
+
+
+
+  // Helper function to validate email format
+  function isValidEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+  }
+
+  // Login Form Validation
+  document.querySelector('.login-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const loginCard = document.querySelector('.login-card');
+    const username = loginCard.querySelector('input[placeholder="Username"]').value.trim();
+    const password = loginCard.querySelector('input[placeholder="Password"]').value.trim();
+
+    if (!username || !password) {
+      alert("Please enter both Username and Password.");
+      return;
+    }
+
+    // If successful
+    alert("Login successful!");
+    loginCard.querySelector('input[placeholder="Username"]').value = "";
+    loginCard.querySelector('input[placeholder="Password"]').value = "";
+    loginCard.querySelector('input[type="checkbox"]').checked = false;
+    window.location.href = "index.html";
+  });
+
+  // Signup Form Validation
+  document.querySelector('.register-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const signupCard = document.querySelector('.signup-card');
+    const firstName = signupCard.querySelector('input[placeholder="First Name"]').value.trim();
+    const lastName = signupCard.querySelector('input[placeholder="Last Name"]').value.trim();
+    const email = signupCard.querySelector('input[placeholder="Email"]').value.trim();
+    const password = signupCard.querySelector('input[placeholder="Password"]').value.trim();
+
+    if (!firstName || !lastName || !email || !password) {
+      alert("All fields are required. Please fill in the form completely.");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // If successful
+    alert("Signup successful!");
+    signupCard.querySelector('input[placeholder="First Name"]').value = "";
+    signupCard.querySelector('input[placeholder="Last Name"]').value = "";
+    signupCard.querySelector('input[placeholder="Email"]').value = "";
+    signupCard.querySelector('input[placeholder="Password"]').value = "";
+  });
+
+  </script>
+ 
+
+</body>
+</html>

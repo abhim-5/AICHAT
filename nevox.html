@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI CHAT - Nevox AI</title>
+  <link  rel="icon" href="images/logo2.png" type="image/png" sizes="16x16"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+  <div class="hero-image-container">
+    <img src="images/bg-room.png" alt="AI Chat" class="hero-image">
+  </div>
+  <header>
+    <a href="index.html" class="logo-link">
+    <div class="logo ">
+      <img src="images/logo2.png" alt="AI Chat Logo" class="logo-img ">
+      <span class="span1">AI</span><span class="span2">CHAT</span></div>
+      </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="nevox-container">
+        <a href="nevox.html" class="nevox-link thisone">Nevox</a>
+        <div class="nevox-tooltip">
+          <a href="veevee.html">VeeVee</a>
+          <a href="tillu.html">Baba Tillu</a>
+          <a href="bbg.html">BBG</a>
+        </div>
+      </div>
+      <a href="plans.html">Pricing</a>
+      <a href="about.html">About Us</a>
+    </nav>
+    <button class="button"><a href="login.html">Sign Up / Sign In</a></button>
+  </header>
+
+<div class="frame ">
+  <iframe src="http://localhost:7001"></iframe>
+ </div>
+
+ <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      
+      <p class="slogan animate-on-scroll">
+        We growing up your <br>
+        business with personal <br>
+        <strong>AI manager.</strong><br>
+        <span class="credit">AICHAT, 2025.</span>
+      </p>
+    </div>
+<div class="footer-mid animate-on-scroll" >
+  <a href="index.html">
+  <img src="images/logo2.png" alt="chat icon" class="chat-icon animate-on-scroll"></a>
+</div>
+    <div class="footer-links animate-on-scroll">
+      <div>
+        <h4>Platform</h4>
+        <a href="#">Plans & Pricing</a>
+        <a href="#">Personal AI Manager</a>
+        <a href="#">AI Business Writer</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">News</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Documentation</a>
+        <a href="#">Papers</a>
+        <a href="#">Press Conferences</a>
+      </div>
+      <div>
+        <h4>Get the app</h4>
+        <button class="app-btn">🪟 Windows</button><br>
+        <button class="app-btn">🍎 macOS</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 AICHAT. All rights reserved.</span>
+    <div class="bottom-links">
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollElements = document.querySelectorAll(".animate-on-scroll");
+
+  const elementInView = (el, offset = 100) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return elementTop <= (window.innerHeight - offset);
+  };
+
+  const displayScrollElement = (element) => {
+    element.classList.add("visible");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 100)) {
+        displayScrollElement(el);
+      }
+    });
+  };
+
+  window.addEventListener("scroll", () => {
+    handleScrollAnimation();
+  });
+  
+  // Trigger on page load too
+  handleScrollAnimation();
+});
+</script>
+
+</body>
+</html>
