@@ -1,4 +1,4 @@
-Website Link : https://aichat-personas.netlify.app/about
+Website Link : https://aichat-personas.netlify.app
 (Without Backend)
 <br>
 MULTI PERSONAS AICHAT BOT 
