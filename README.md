@@ -3,7 +3,7 @@ Website Link for desktop: https://aichat-personas.netlify.app
 <br>
 MULTI PERSONAS AICHAT BOT 
 <br>
-🚀 For running this website along with backend locally, follow these steps :
+🚀 For running this website locally along with backend, follow these steps :
 <hr>
 1  📂 Navigate to the project folder<br>
 Open your file explorer and browse to the folder that contains the project files. <br><br>
